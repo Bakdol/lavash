@@ -30,3 +30,13 @@ while True:
     else:
         cart[item] = quantity
     print(f" Добавлено: {item} x{quantity}")
+print("\n Чек:")
+total = 0
+
+for item, quantity in cart.items():
+    price = products[item]
+    cost = price * quantity
+    total += cost
+    print(f"{item} x{quantity} = {cost} сомиков")
+
+print(f"\n Итого: {total} сомиков")
