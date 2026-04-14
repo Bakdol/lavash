@@ -10,3 +10,23 @@ cart = {}
 print(" Доступные товары:")
 for name, price in products.items():
     print(f"{name} - {price} сом")
+while True:
+    item = input("\nВведите товар (или 'стоп'): ").lower()
+    if item == "стоп":
+        break
+    if item not in products:
+        print(" Такого товара нет")
+        continue
+    try:
+        quantity = int(input("Сколько штук: "))
+        if quantity <= 0:
+            print(" Количество должно быть больше 0")
+            continue
+    except:
+        print(" Введите число")
+        continue
+    if item in cart:
+        cart[item] += quantity
+    else:
+        cart[item] = quantity
+    print(f" Добавлено: {item} x{quantity}")
