@@ -1,3 +1,4 @@
+'''python
 products = { 
     "хлеб": 30,
     "молоко": 60,
@@ -37,3 +38,4 @@ for item, quantity in cart.items():
     print(f"{item} x{quantity} = {cost} сомиков")
 
 print(f"\n Итого: {total} сомиков")
+'''
